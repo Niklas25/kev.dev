@@ -1,0 +1,558 @@
+html {
+    background-color: #141726;
+    color: #8A8B8F;
+    margin: 0;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    position: relative;
+    
+
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    body {
+      margin: 0;
+      scroll-snap-type: y mandatory; 
+      scroll-behavior: smooth;
+      scroll-padding: 0; /* nicht nötig */
+    }
+  
+    section {
+      height: 100vh;
+      scroll-snap-align: start; 
+      scroll-margin: 0;  /* nicht nötig */
+    }
+  }
+
+  #bgpicture {
+    position: absolute;
+    width: 100%;
+    height: 150vh;
+    top: -10%;
+    opacity: 60%;
+   
+  }
+
+ 
+section:first-of-type {
+  opacity: 1;
+  transition: all 0.5s;
+}
+ 
+section:target {
+  opacity: 1;
+ 
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+/* IMPRESSUM */
+
+.impressum {
+  background-color: #141726;
+  z-index: 2;
+  position: absolute;
+  right: 0;
+  height: 100vh;
+  width: 0;
+  animation-delay: 10s;
+  animation: impressum 3s forwards ease-in-out;
+}
+
+@keyframes impressum {
+  from {width: 0;}
+  to {width: 100%;}
+}
+
+.impressumheader {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  line-height: 40px;
+  color: #FAD207;
+}
+
+.impressumtext {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  line-height: 28px;
+  color: #8A8B8F;
+  opacity: 0.7;
+}
+
+
+  /* NAVIGATION */
+
+
+.navigation {
+    position: absolute;
+    position: fixed;
+    top: 40vh;
+    z-index: 1;
+}
+
+
+.active {
+    color: #FAD207;
+}
+
+ul > li {
+    font-size: 20px;
+    list-style:none;
+    margin-bottom: 30px;
+    margin-left: 3rem;
+}
+
+.header-nav > ul > li > a:link {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.header-nav > ul >li > a:hover {
+  color: #E5E5E5;
+  text-decoration: none;
+}
+
+.header-nav > ul >li > a:active {
+  color: #E5E5E5;
+  text-decoration: none;
+}
+
+.header-nav > ul >li > a:visited {
+  color: #FFF;
+  text-decoration: none;
+}
+
+    /* FIRST PAGE */
+
+
+#page1 {
+    position: relative;
+    height: 100vh;
+    width: auto;
+}
+
+
+#nav-banner {
+  color: white;
+  font-size: 40px;
+  position: absolute;
+  top: 5vh;
+  left: 3vh;
+  position: fixed;
+  z-index: 3;
+  
+}
+
+.bar-nav {
+  position: absolute;
+  position: fixed;
+  top: 6vh;
+  right: 3vh;
+}
+
+
+.textMiddle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 800px;
+}
+
+
+div.textMiddle > h1 {
+    font-size: 40px;
+    color: #FFFFFF;
+    font-style: normal;
+    margin-bottom: 0px;
+    margin-top: 1vh;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+div.textMiddle > span {
+    font-size: 30px;
+    color: white;
+    white-space: nowrap; 
+}
+
+div.textMiddle > p {
+    opacity: 0.7;
+    font-size: 20px;
+    line-height: 28px;
+    width: 110%;
+}
+
+.pmobile {
+  display: none;
+}
+
+.text-nav > ul {
+  padding-left: 0;
+}
+
+.text-nav > ul > li {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.arrow {
+  top: 2px;
+}
+
+.text-nav > ul > li > a:link {
+  color: #FAD207;
+  text-decoration: none;
+}
+
+.text-nav > ul >li > a:hover {
+  color: #FAD207;
+  text-decoration: none;
+}
+
+.text-nav > ul >li > a:active {
+  color: #FAD207;
+  text-decoration: none;
+}
+
+.text-nav > ul >li > a:visited {
+  color: #FAD207;
+  text-decoration: none;
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+  .pmobile { display: block;}
+}
+
+/* SECOND PAGE */
+
+#page2 {
+  position: relative;
+  height: 100vh;
+  width: auto;
+}
+
+.middleText2{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 896px;
+  
+}
+
+.middleText2 > h1  {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 63px;
+  color: #FFFFFF;
+  white-space: nowrap;
+  
+}
+#scrollpage {
+  height:400px;
+  width:896px;
+  overflow:auto;
+}
+
+a:link {
+  color: #FAD207;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #FAD207;
+  text-decoration: none;
+}
+
+a:active {
+  color: #FAD207;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #FAD207;
+  text-decoration: none;
+}
+
+video {
+  position: absolute;
+  width: 175px;
+  height: 150px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(PURISH-banbutsu_Team_600x600.png);
+  border: 6px solid #1D2030;
+  border-radius: 10px;  
+}
+
+#video1 {
+  top: 310px;
+  width: 175px;
+  height: 150px;
+}
+
+#video2 {
+  
+  bottom: -65%;
+  right: 0;
+  width: 175px;
+  height: 150px;
+}
+
+/* FIRST COMMENT */
+
+#secoundcomment1 {
+  position: relative;
+}
+
+#firstcomment1 {
+  width: 597.74px;
+  height: 120px;
+  left: 510px;
+  top: 1189px;
+  background: #1D2030;
+  border-radius: 10px;
+  margin-top: 2vh;
+}
+
+#firstcomment1 > img {
+  margin-top: 1vh;
+  margin-left: 1vh;
+}
+
+.fistcommentText {
+  color: white;
+  position: absolute;
+  margin-left: 1vh;
+  margin-top: 1vh;
+  max-width: 430px;
+}
+
+.unterschrift1 {
+  position: absolute;
+  bottom: 0.5vh;
+  left: 14vh;
+}
+
+.time { 
+    position: absolute;
+    bottom: 0.5vh;
+    right: 2vh;
+}
+
+/* SECOUND COMMENT */
+
+#firstcomment2 {
+  position: absolute;
+  right: 0%;
+  bottom: -5%;
+}
+
+#secoundcomment2 {
+  
+  position: absolute;
+  right: 0;
+  width: 596.75px;
+  height: 120px;
+  background: #1D2030;
+  border-radius: 10px;
+}
+
+
+/* THIRD PAGE */
+
+#page3 {
+  position: relative;
+  height: 100vh;
+  width: auto;
+}
+
+.middleText3{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 700px;
+}
+
+.middleText3 > h1 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 63px;
+  margin-bottom: 30px;
+  color: #FFFFFF;
+}
+
+.contactborder {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  height: 633px;
+  background: #1D2030;
+  border-radius: 8px;
+}
+
+.contactdiv {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+div.contactdiv > h2 {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+div.contactdiv > p {
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  white-space: nowrap;
+}
+
+div.contactdiv > img {
+  position: absolute;
+  right: 20px;
+  top: 100px;
+}
+
+.line {
+  position: absolute;
+  top: 300px;
+}
+
+.contactdiv > span {
+  position: absolute;
+  left: 130px;
+  top: 150px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 50px;
+}
+
+.ln {
+  position: absolute;
+  top: 0px;
+  left: -100px;
+}
+
+.ln:hover {
+  color: #FAD207;
+}
+
+.letter {
+  position: absolute;
+  bottom: 8px;
+  left: -100px;
+}
+
+#bannerbottom {
+  
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#bookacall {
+position: absolute;
+top: 52%;
+color: white;
+font-size: 24px;
+line-height: 16px;
+left: 50%;
+transform: translate(-50%, -50%);
+letter-spacing: 1.5px;
+}
+
+#vorname {
+  position: absolute;
+  left: 35.55%;
+  transform: translate(-50%, -50%);
+  background-color: #1D2030;
+  color: white;
+  top: 60%;
+  width: 244.59px;
+  height: 42px;
+  border: 1px solid #8A8B8F;
+  border-radius: 5px;
+}
+
+#nachname {
+  position: absolute;
+  left: 64.5%;
+  transform: translate(-50%, -50%);
+  background-color: #1D2030;
+  color: white;
+  top: 60%;
+  width: 244.59px;
+  height: 42px;
+  border: 1px solid #8A8B8F;
+  border-radius: 5px;
+}
+
+#email {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1D2030;
+  color: white;
+  top: 70%;
+  width: 505px;
+  height: 42px;
+  border: 1px solid #8A8B8F;
+  border-radius: 5px;
+}
+
+#anliegen {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1D2030;
+  color: white;
+  top: 80%;
+  width: 505px;
+  height: 42px;
+  border: 1px solid #8A8B8F;
+  border-radius: 5px;
+}
+
+#buchenbutton {
+  position: absolute;
+  width: 505px;
+  height: 42px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 90%;
+  background: #FAD207;
+  border-radius: 5px;
+}
