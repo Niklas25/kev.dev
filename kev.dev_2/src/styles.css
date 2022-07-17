@@ -8,8 +8,6 @@ html {
 body {
     font-family: 'Roboto Mono', monospace;
     position: relative;
-    
-
 }
 
 @media (prefers-reduced-motion: no-preference) {

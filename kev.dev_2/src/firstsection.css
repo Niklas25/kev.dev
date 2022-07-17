@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+html, body, h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Mono', monospace;
+}
+
+a {
+    text-decoration: none;
+    color: #FAD207;
+}
+
+#bgpicture {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+}
+
+.page1 {
+    background-color: #141726;
+    border-radius: 10px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    padding: 40px 70px;
+    width: 800px;
+    box-sizing: border-box;
+    max-width: 95vw;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.sec1-card-header {
+    gap: 40px;
+    margin-bottom: 32px;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.gap-sm {
+    gap: 8px;
+}
+
+.gap-md {
+    gap: 24px;
+}
+
+.mb-sm {
+    margin-bottom: 8px;
+}
+
+.sec1-card-content {
+    color: #D9D9D9;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: .1em;
+    font-weight: 300;
+}
+
+.sec1-card-footer {
+    margin-top: 32px;
+}
+
+.navigation {
+    max-width: 95vw;
+    margin: 0 auto;
+    margin-top: 3vh;
+}
+
+.navigation-title {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+
+.navigation-links {
+    gap: 40px;
+    margin-right: 10vw;
+}
+
+.navigation-links a {
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+}
+
+.navigation-link-active {
+    color: #FAD207 !important;
+}
+
+@media only screen and (max-width: 800px) {
+    .navigation-links {
+        display: none;
+    }
+
+    .sec1-card-header {
+        display: block;
+        margin-bottom: 14px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .page1 {
+        padding: 20px;
+    }
+
+    .sec1-card-header img {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    .sec1-card-content {
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: .05em;
+    }
+
+    .navigation-title {
+        font-size: 20px;
+    }
+
+    .bar-nav {
+        width: 32px;
+        height: 32px;
+    }
+
+    .navigation {
+        margin-top: 2vh;
+    }
+}
+
