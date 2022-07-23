@@ -1,0 +1,556 @@
+html {
+    background-color: #141726;
+    color: #8A8B8F;
+    margin: 0;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    position: relative;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    body {
+      margin: 0;
+      scroll-snap-type: y mandatory; 
+      scroll-behavior: smooth;
+      scroll-padding: 0; /* nicht nötig */
+    }
+  
+    section {
+      height: 100vh;
+      scroll-snap-align: start; 
+      scroll-margin: 0;  /* nicht nötig */
+    }
+  }
+
+  #bgpicture {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+   
+  }
+
+ 
+section:first-of-type {
+  opacity: 1;
+  transition: all 0.5s;
+}
+ 
+section:target {
+  opacity: 1;
+ 
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+/* IMPRESSUM */
+
+.impressum {
+  background-color: #141726;
+  z-index: 2;
+  position: absolute;
+  right: 0;
+  height: 100vh;
+  width: 0;
+  animation-delay: 10s;
+  animation: impressum 3s forwards ease-in-out;
+}
+
+@keyframes impressum {
+  from {width: 0;}
+  to {width: 100%;}
+}
+
+.impressumheader {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  line-height: 40px;
+  color: #FAD207;
+}
+
+.impressumtext {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  line-height: 28px;
+  color: #8A8B8F;
+  opacity: 0.7;
+}
+
+
+  /* NAVIGATION */
+
+
+.navigation {
+    position: absolute;
+    position: fixed;
+    top:60px;
+    left:48%;
+    z-index: 1;
+}
+
+
+.active {
+    color: #FAD207;
+    white-space: nowrap;
+}
+
+.header-nav > ul > li {
+  font-size: 20px;
+  list-style:none;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #FAD207;
+  display: block;
+  float: left;
+  padding-left: 60px;
+    
+}
+
+.header-nav > ul > li > a:link {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.header-nav > ul >li > a:hover {
+  color: #E5E5E5;
+  text-decoration: none;
+}
+
+.header-nav > ul >li > a:active {
+  color: #E5E5E5;
+  text-decoration: none;
+}
+
+.header-nav > ul >li > a:visited {
+  color: #FFF;
+  text-decoration: none;
+}
+
+    /* FIRST PAGE */
+
+
+.page1 {
+    position: relative;
+    height: 100vh;
+    width: auto;
+}
+
+
+#nav-banner {
+  color: white;
+  font-size: 40px;
+  position: absolute;
+  top: 5vh;
+  left: 3vh;
+  position: fixed;
+  z-index: 3;
+  
+}
+
+.bar-nav {
+  position: absolute;
+  position: fixed;
+  top: 6vh;
+  right: 3vh;
+}
+
+
+.textMiddle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 619px;
+    background: #07001B;
+    border-radius: 5px;
+}
+
+.textMiddle > img {
+  position: absolute;
+  top: 41px;
+  left: 69px;
+}
+
+
+div.textMiddle > h1 {
+    font-size: 40px;
+    color: #FFFFFF;
+    font-style: normal;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    top: 66px;
+    right: 196px;
+    margin: 0;
+}
+
+div.textMiddle > span {
+    font-size: 20px;
+    color: white;
+    white-space: nowrap;
+    position: absolute;
+    top: 123px;
+    right: 138px;
+
+}
+
+div.textMiddle > p {
+    opacity: 0.7;
+    font-size: 20px;
+    line-height: 28px;
+    width: 663px;
+    height: 250px;
+    position: absolute;
+    top: 204px;
+    left: 69px;
+    margin: 0;
+    color: #D9D9D9;
+}
+
+.pmobile {
+  display: none;
+}
+
+.text-nav > ul {
+  position: absolute;
+  top: 487px;
+  left: 70px;
+  margin: 0;
+  padding-left: 0;
+}
+
+.text-nav > ul > li {
+  padding-left: 0;
+  margin-left: 0;
+  list-style:none;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.arrow {
+  top: 2px;
+}
+
+.text-nav > ul > li > a:link {
+  color: #FAD207;
+  text-decoration: none;
+}
+
+.text-nav > ul >li > a:hover {
+  color: #FAD207;
+  text-decoration: none;
+}
+
+.text-nav > ul >li > a:active {
+  color: #FAD207;
+  text-decoration: none;
+}
+
+.text-nav > ul >li > a:visited {
+  color: #FAD207;
+  text-decoration: none;
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+  .pmobile { display: block;}
+}
+
+/* SECOND PAGE */
+
+#page2 {
+  position: relative;
+  height: 100vh;
+  width: auto;
+}
+
+.middleText2{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 740px;
+  background: #07001B;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  
+}
+
+.middleText2 > h1  {
+  /* position: absolute;
+  top: 52px;
+  left: 84px; */
+  padding-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 63px;
+  color: #FFFFFF;
+  white-space: nowrap;
+  margin: 0;
+  }
+
+  .middleText2 > h1 > span {
+    padding: 0 17px;
+  }
+
+a:link {
+  color: #FAD207;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #FAD207;
+  text-decoration: none;
+}
+
+a:active {
+  color: #FAD207;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #FAD207;
+  text-decoration: none;
+}
+
+
+/* FIRST COMMENT */
+
+.relativdiv {
+  position: relative;
+}
+
+#comment1 {
+  position: absolute;
+  width: 562px;
+  height: 161px;
+  left: 63px;
+  top: 158px;
+  background: #0E132C;
+  border-radius: 10px;
+}
+
+#comment2 {
+  position: absolute;
+  left: 182px;
+  top: 342px;
+  background: #0E132C;
+  border-radius: 10px;
+  width: 562px;
+  height: 161px;
+}
+
+#comment3 {
+  position: absolute;
+  left: 63px;
+  top: 526px;
+  background: #0E132C;
+  border-radius: 10px;
+  width: 562px;
+  height: 161px;
+}
+
+.commentimg {
+  position: absolute;
+  top: 32px;
+  left: 15px;
+}
+
+.commenttext {
+  color: white;
+  position: absolute;
+  top: 13px;
+  left: 130px;
+  max-width: 404px;
+}
+
+.commentsign {
+  position: absolute;
+  left: 131px;
+  top: 81px;
+}
+
+/* THIRD PAGE */
+
+#page3 {
+  position: relative;
+  height: 100vh;
+  width: auto;
+}
+
+.middleText3{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 721px;
+  background: #07001B;
+  border-radius: 5px;
+}
+
+.middleText3 > h1 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 63px;
+  margin-bottom: 30px;
+  color: #FFFFFF;
+}
+
+.middleText3 > h2 {
+  position: absolute;
+  top: 56px;
+  left: 274px;
+  font-size: 24px;
+  line-height: 32px;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.middleText3 > p {
+  position: absolute;
+  top: 98px;
+  left: 274px;
+  font-size: 24px;
+  line-height: 32px;
+  width: 349px;
+  margin: 0;
+  color: white;
+}
+
+.middleText3 > img {
+  position: absolute;
+  left: 114px;
+  top: 31px;
+}
+
+.line {
+  position: absolute;
+  top: 300px;
+  color: white;
+}
+
+.middleText3 > span {
+  position: absolute;
+  left: 196px;
+  top: 195px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 50px;
+}
+
+.linkedinlogo {
+  position: absolute;
+  top: 206px;
+  left: 128px;
+}
+
+.maillogo {
+  position: absolute;
+  top: 260px;
+  left: 128px;
+}
+
+#contactline {
+  position: absolute;
+  top: 328px;
+}
+
+#bannerbottom {
+  
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#bookacall {
+position: absolute;
+left: 128px;
+top: 373px;
+color: white;
+font-size: 24px;
+line-height: 16px;
+letter-spacing: 1.5px;
+}
+
+#vorname {
+  position: absolute;
+  color: white;
+  top: 430px;
+  left: 125px;
+  width: 266.38px;
+  height: 42px;
+  border: 1px solid white;
+  background: #07001B;
+  border-radius: 5px;
+}
+
+#nachname {
+  position: absolute;
+  color: white;
+  left: 408.62px; 
+  top: 430px;
+  width: 266.38px;
+  height: 42px;
+  border: 1px solid white;
+  background: #07001B;
+  border-radius: 5px;
+}
+
+#email {
+  position: absolute;
+  color: white;
+  top: 491px;
+  left: 125px;
+  width: 550px;
+  height: 42px;
+  border: 1px solid white;
+  background: #07001B;
+  border-radius: 5px;
+}
+
+#anliegen {
+  position: absolute;
+  color: white;
+  top: 552px;
+  left: 125px;
+  width: 550px;
+  height: 42px;
+  border: 1px solid white;
+  background: #07001B;
+  border-radius: 5px;
+}
+
+#buchenbutton {
+  position: absolute;
+  left: 125px;
+  top: 630px;
+  width: 550px;
+  height: 42px;
+  background: #FAD207;
+  border-radius: 5px;
+}
