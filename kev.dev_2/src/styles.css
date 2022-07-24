@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 
+<<<<<<< HEAD
 html, body, h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   padding: 0;
@@ -12,6 +13,11 @@ html, body, h1, h2, h3, h4, h5, h6, p {
 a {
   text-decoration: none;
   color: #FAD207;
+=======
+body {
+    font-family: 'Roboto Mono', monospace;
+    position: relative;
+>>>>>>> 23a031bc794061d20575e3ad4dccb47142295f81
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -113,6 +119,13 @@ section:target {
 .sec1 {
   height: 100vh;
   width: 100vw;
+
+.sec-page1 {
+  position: relative;
+    height: 100vh;
+    width: auto;
+}
+
 }
 
 .page1 {
