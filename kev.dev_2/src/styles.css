@@ -257,6 +257,7 @@ h1 {
   height: 630px;
   background: #07001B;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
   border-radius: 5px;
   color: white;
   padding: 60px;
