@@ -171,6 +171,21 @@ a > h2 {
   box-sizing: border-box;
   max-width: 95vw;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  animation: opener;
+  animation-duration: 1s;
+}
+
+@keyframes opener {
+  0% {
+    top: -20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+      top: 54%;
+      left: 50%;
+      transform: translate(-50%, -50%);  
+    }
 }
 
   h1 {
@@ -287,7 +302,7 @@ h1 {
 }
 
 
-.überschrift > span {
+.überschrift-sec2 > span {
     padding: 18px;
     color: #FAD207;
   }
@@ -348,6 +363,7 @@ h1 {
   .überschrift-sec2 {
     font-size: 24px;
     word-spacing: 2px;
+    line-height: 20px;
   }
 
   .überschrift-sec2 > span {
